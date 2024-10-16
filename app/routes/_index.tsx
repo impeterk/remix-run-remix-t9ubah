@@ -8,9 +8,9 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader() = async () => {
+export const loader = async () => {
   return json({fesak: 'index'})
-}
+};
 
 export default function Index() {
   return (
