@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import {json} from '@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
@@ -6,6 +7,10 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
+
+export const loader() = async () => {
+  return json({fesak: 'index'})
+}
 
 export default function Index() {
   return (
